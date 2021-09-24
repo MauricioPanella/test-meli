@@ -1,0 +1,46 @@
+@import "../../../../assets/scss/ml-variables.scss";
+
+.mensaje {
+    display: flex;
+    margin-top: 40px;
+    padding: 40px;
+    background: #ffffff;
+    font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    justify-content: center;
+    .titulo {
+        font-size: $ml-font-24;
+        font-weight: 600;
+        margin-left: 24px;
+    }
+    .contenido {
+        font-size: $ml-font-14;
+        a{
+            color: $ml-blue;
+        }
+    }
+}
+
+.row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 16px;
+    align-items: center;
+    margin: 0 auto !important;
+    padding: 0 48px;
+    height: 56px;
+}
+
+.svg {
+    padding: 16px;
+}
+
+.leyenda {
+    margin-top: 12px;
+}
+
+@media (max-width: 768px) {
+    .svg {
+        display: none;
+    }
+}

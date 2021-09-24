@@ -1,0 +1,92 @@
+@import "../../../../../assets/scss/ml-variables.scss";
+
+.container {
+    background: #ffffff;
+    padding-left: 0;
+    border-radius: 4px;
+
+    &.content {
+        position: relative;
+        display: block;
+        list-style-type: none;
+
+        li {
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .producto {
+            .item-link {
+                color: $ml-dark-grey;
+                text-decoration: none;
+                display: inline-flex;
+                .imagen {
+                    padding: 16px;
+                    img {
+                        width: 180px;
+                        height: 180px;
+                        border-radius: 4px;
+                        overflow: hidden;
+                    }
+                }
+                .detalle {
+                    padding: 40px 0px;
+                    .info {
+                        margin-bottom: 32px;
+                        .precio {
+                            font-size: $ml-font-24;
+                            margin: 0;
+                        }
+                        .ubicacion {
+                            position: absolute;
+                            color: $ml-dark-grey;
+                            right: 100px;
+                            max-width: 120px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-size: 12px;
+                        }
+                    }
+                    .titulo {
+                        font-size: $ml-font-18;
+                        font-weight: 500;
+                        margin-bottom: 10px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        padding-right: 15px;
+                    }
+                    .cantidad {
+                        font-size: $ml-font-18;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 16px;
+    background-color: $ml-yellow;
+    align-items: center;
+    margin: 0 auto !important;
+    padding: 0 48px;
+    height: 0px;
+}
+
+@media (max-width: 768px) {
+    .row {
+        display: contents;
+        grid-gap: 16px;
+        background-color: $ml-yellow;
+        align-items: center;
+        margin: 0 auto !important;
+        padding: 0 48px;
+        height: 0px;
+    }
+}

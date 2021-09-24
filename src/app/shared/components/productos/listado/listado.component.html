@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
+        <section *ngIf="productos && productos.length > 0 && !cargado">
+            <app-categoria [categoria]="categorias">
+            </app-categoria>
+            <ul class="container content">
+                <li *ngFor="let producto of productos" class="producto">
+                    <a [routerLink]="['/items', producto.id]" class="item-link">
+                        <div class="imagen">
+                            <img src="{{ producto.picture }}" alt="{{ producto.title }}">
+                        </div>
+                        <div class="detalle">
+                            <div class="info">
+                                <div class="precio">
+                                    $ {{ producto.price.amount | number : '' }}
+                                    <img *ngIf="producto.free_shipping" src="assets/images/ic_shipping.png"
+                                        alt="Envío gratis">
+                                </div>
+                                <div class="ubicacion">
+                                    {{ producto.city_name }}
+                                </div>
+                            </div>
+                            <div class="titulo">
+                                {{ producto.title }}
+                            </div>
+                            <div class="cantidad">
+                                {{ (producto.available_quantity == 1) ? 'Complemento único!' :
+                                ((producto.available_quantity > 1) ? producto.available_quantity + ' Disponibles' : 'Sin
+                                stock') }}
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <app-no-encontrado *ngIf="!productos && !cargado"></app-no-encontrado>
+    </div>
+    <div class="col-xs-1"></div>
+</div>

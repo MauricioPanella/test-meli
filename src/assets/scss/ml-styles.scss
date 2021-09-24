@@ -1,0 +1,29 @@
+@import './ml-variables.scss';
+
+body {
+  margin: 0;
+  background-color: $ml-background;
+  font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+}
+
+.container {
+  width: 100%;
+  justify-content: center !important;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+@each $size, $abbr in (0, xs), (768px, sm), (992px, md), (1200px, lg) {
+  @media (min-width: $size) {
+    @for $i from 1 through 12 {
+      .col-#{$abbr}-#{$i} {
+        grid-column-end: span $i;
+      }
+    }
+  }
+}

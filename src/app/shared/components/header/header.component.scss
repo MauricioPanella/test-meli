@@ -1,0 +1,36 @@
+@import "../../../../assets/scss/ml-variables.scss";
+
+.logo {
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  background: $ml-yellow url("../../../../assets/images/logo_ML.png") center center no-repeat;
+  background-size: 100%;
+  margin-right: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 16px;
+  background-color: $ml-yellow;
+  align-items: center;
+  margin: 0 auto !important;
+  padding: 0 48px;
+  height: 56px;
+}  
+
+@media (max-width: 768px) {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 16px;
+    background-color: $ml-yellow;
+    align-items: center;
+    margin: 0 auto !important;
+    padding: 0 0px;
+    .logo {
+      display: none;
+    }
+  }
+}

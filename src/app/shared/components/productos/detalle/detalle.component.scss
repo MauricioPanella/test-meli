@@ -1,0 +1,121 @@
+@import "../../../../../assets/scss/ml-variables.scss";
+
+.column1 {
+    width: 100%;
+}
+.column2 {
+    width: 40%;
+}
+
+.container-detalle {
+    background-color: #ffffff;
+    padding: 32px;
+    display: flex;
+
+    .imagen img {
+        width: 50%;
+    }
+    .producto {
+        .detalle {
+            padding-left: 16px;
+        }
+
+        .producto-detalle {
+            font-size: $ml-font-14;
+            margin-bottom: 16px;
+        }
+
+        .info {
+            font-size: $ml-font-16;
+            margin-top: 0;
+            margin-bottom: 32px;
+        }
+
+        .precio {
+            font-size: $ml-font-28;
+            margin-top: 0;
+            margin-bottom: 32px;
+        }
+
+        .btn-sell {
+            background-color: $ml-blue;
+            color: #fff;
+            width: 100%;
+            padding: 7px 0;
+            max-width: 250px;
+        }
+    }
+}
+
+.descripcion {
+    display: block;
+    background-color: #ffffff;
+    padding: 32px;
+    max-width: 100%;
+    h3 {
+        font-size: 22px;
+        margin-bottom: 22px;
+        font-weight: 400;
+        max-width: 70%;
+    }
+    p {
+        font-size: $ml-font-14;
+        font-weight: 400;
+        max-width: 70%;
+    }
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 16px;
+    background-color: $ml-yellow;
+    align-items: center;
+    margin: 0 auto !important;
+    padding: 0 48px;
+    height: 0px;
+}
+
+.block {
+    display: block;
+}
+
+.btn-primary {
+    background-color: $ml-blue !important;
+    width: -webkit-fill-available !important;
+    height: 40px;
+}
+
+@media (max-width: 768px) {
+    .row {
+        display: contents;
+        grid-gap: 16px;
+        background-color: $ml-yellow;
+        align-items: center;
+        margin: 0 auto !important;
+        padding: 0 48px;
+        height: 0px;
+    }
+
+    .container-detalle {
+        background-color: #fff;
+        padding: 32px;
+        display: block !important;
+    }
+
+    .column2 {
+        width: 100%;
+    }
+
+    .descripcion {
+        display: block;
+        background-color: #fff;
+        padding: 32px;
+        max-width: 100%;
+        h3,
+        p {
+            font-weight: 400;
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
+        <app-categoria [categoria]="categoriaProducto">
+        </app-categoria>
+        <div *ngIf="producto && descripcionProducto" class="container-detalle">
+            <div class="imagen column1">
+                <img src="{{ producto.picture }}" alt="{{ producto.title }}">
+            </div>
+            <div class="producto detalle column2">
+                <div class="producto-detalle">
+                    {{ (producto.condition == 'new') ? 'Nuevo' : 'Usado' }} -
+                    {{ producto.sold_quantity + ' Vendidos' }}
+                </div>
+                <h2 class="info">{{ producto.title }}</h2>
+                <p class="precio">$ {{ producto.price.amount | number : '1.2-2' }}</p>
+                <button mat-flat-button  class="btn-primary" color="primary">
+                    Comprar
+                </button>
+            </div>
+        </div>
+        <div class="container-detalle descripcion">
+            <div>
+                <h3>Descripción del producto</h3>
+                <p>{{ descripcionProducto }}</p>
+            </div>
+        </div>
+        <app-no-encontrado *ngIf="!producto && !cargado"></app-no-encontrado>
+    </div>
+    <div class="col-xs-1"></div>
+</div>
