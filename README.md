@@ -4,7 +4,7 @@
 
 -Abrir la carpeta y ejecutar npm install para instalar las dependencias.
 
--Ejecutar ng serve -o para ejecutar el proyecto en http://localhost:4200/ y abrirlo en un pestaña nueva.
+-Ejecutar ng serve -o para ejecutar el proyecto en http://localhost:4200/.
 
 - Version Angular CLI: 12.2.6
 - Node: 14.17.6
